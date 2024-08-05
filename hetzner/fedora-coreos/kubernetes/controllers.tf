@@ -48,6 +48,11 @@ resource "hcloud_server" "controllers" {
     user_data = data.ct_config.controllers.*.rendered[count.index]
     ssh_keys  = var.ssh_fingerprints
 
+    public_net {
+        ipv4_enabled = true
+        ipv6_enabled = false
+    }
+
     labels = {
         name = "${var.cluster_name}-controller"
     }
