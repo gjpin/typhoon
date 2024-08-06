@@ -5,4 +5,7 @@ diff:
 order used to add hetzner support:
 - network
 - firewall
+- zone
 - controllers
+- workers
+- bootstrap

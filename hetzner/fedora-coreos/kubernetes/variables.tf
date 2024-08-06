@@ -49,13 +49,69 @@ variable "controller_type" {
   default     = "cpx11"
 }
 
+variable "worker_type" {
+  type        = string
+  description = "Server type for controllers (e.g. cpx11, cpx21, cpx31)."
+  default     = "cpx11"
+}
+
 variable "os_image" {
   type        = string
   description = "Fedora CoreOS image for instances"
+}
+
+variable "controller_snippets" {
+  type        = list(string)
+  description = "Controller Butane snippets"
+  default     = []
+}
+
+variable "worker_snippets" {
+  type        = list(string)
+  description = "Worker Butane snippets"
+  default     = []
 }
 
 # configuration
 variable "ssh_fingerprints" {
   type        = list(string)
   description = "SSH public key fingerprints. (e.g. see `ssh-add -l -E md5`)"
+}
+
+variable "networking" {
+  type        = string
+  description = "Choice of networking provider (flannel, calico, or cilium)"
+  default     = "cilium"
+}
+
+variable "pod_cidr" {
+  type        = string
+  description = "CIDR IPv4 range to assign Kubernetes pods"
+  default     = "10.2.0.0/16"
+}
+
+variable "service_cidr" {
+  type        = string
+  description = <<EOD
+CIDR IPv4 range to assign Kubernetes services.
+The 1st IP will be reserved for kube_apiserver, the 10th IP will be reserved for coredns.
+EOD
+  default     = "10.3.0.0/16"
+}
+
+# advanced
+variable "components" {
+  description = "Configure pre-installed cluster components"
+  # Component configs are passed through to terraform-render-bootstrap,
+  # which handles type enforcement and defines defaults
+  # https://github.com/poseidon/terraform-render-bootstrap/blob/main/variables.tf#L95
+  type = object({
+    enable     = optional(bool)
+    coredns    = optional(map(any))
+    kube_proxy = optional(map(any))
+    flannel    = optional(map(any))
+    calico     = optional(map(any))
+    cilium     = optional(map(any))
+  })
+  default = null
 }

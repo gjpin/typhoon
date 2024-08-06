@@ -1,8 +1,3 @@
-resource "hetznerdns_zone" "zone" {
-    name = var.dns_zone
-    ttl = 300
-}
-
 # Controller Instance DNS records
 resource "hetznerdns_record" "controllers" {
     count = var.controller_count
