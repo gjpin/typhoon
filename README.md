@@ -37,6 +37,7 @@ Typhoon is available for [Fedora CoreOS](https://getfedora.org/coreos/).
 | Bare-Metal    | Fedora CoreOS | [bare-metal/fedora-coreos/kubernetes](bare-metal/fedora-coreos/kubernetes) | stable |
 | DigitalOcean  | Fedora CoreOS | [digital-ocean/fedora-coreos/kubernetes](digital-ocean/fedora-coreos/kubernetes) | beta |
 | Google Cloud  | Fedora CoreOS | [google-cloud/fedora-coreos/kubernetes](google-cloud/fedora-coreos/kubernetes) | stable |
+| Hetzner       | Fedora CoreOS | [hetzner/fedora-coreos/kubernetes](hetzner/fedora-coreos/kubernetes) | alpha |
 
 | Platform      | Operating System | Terraform Module | Status |
 |---------------|------------------|------------------|--------|
@@ -49,8 +50,9 @@ Typhoon is available for [Flatcar Linux](https://www.flatcar-linux.org/releases/
 | AWS           | Flatcar Linux    | [aws/flatcar-linux/kubernetes](aws/flatcar-linux/kubernetes) | stable |
 | Azure         | Flatcar Linux    | [azure/flatcar-linux/kubernetes](azure/flatcar-linux/kubernetes) | alpha |
 | Bare-Metal    | Flatcar Linux    | [bare-metal/flatcar-linux/kubernetes](bare-metal/flatcar-linux/kubernetes) | stable |
-| DigitalOcean | Flatcar Linux  | [digital-ocean/flatcar-linux/kubernetes](digital-ocean/flatcar-linux/kubernetes) | beta |
-| Google Cloud  | Flatcar Linux  | [google-cloud/flatcar-linux/kubernetes](google-cloud/flatcar-linux/kubernetes) | stable |
+| DigitalOcean  | Flatcar Linux    | [digital-ocean/flatcar-linux/kubernetes](digital-ocean/flatcar-linux/kubernetes) | beta |
+| Google Cloud  | Flatcar Linux    | [google-cloud/flatcar-linux/kubernetes](google-cloud/flatcar-linux/kubernetes) | stable |
+| Hetzner       | Flatcar Linux    | [hetzner/flatcar-linux/kubernetes](hetzner/flatcar-linux/kubernetes) | alpha |
 
 | Platform      | Operating System | Terraform Module | Status |
 |---------------|------------------|------------------|--------|
@@ -69,8 +71,8 @@ Typhoon also provides Terraform Modules for optionally managing individual compo
 
 * [Docs](https://typhoon.psdn.io)
 * Architecture [concepts](https://typhoon.psdn.io/architecture/concepts/) and [operating systems](https://typhoon.psdn.io/architecture/operating-systems/)
-* Fedora CoreOS tutorials for [AWS](docs/fedora-coreos/aws.md), [Azure](docs/fedora-coreos/azure.md), [Bare-Metal](docs/fedora-coreos/bare-metal.md), [DigitalOcean](docs/fedora-coreos/digitalocean.md), and [Google Cloud](docs/fedora-coreos/google-cloud.md)
-* Flatcar Linux tutorials for [AWS](docs/flatcar-linux/aws.md), [Azure](docs/flatcar-linux/azure.md), [Bare-Metal](docs/flatcar-linux/bare-metal.md), [DigitalOcean](docs/flatcar-linux/digitalocean.md), and [Google Cloud](docs/flatcar-linux/google-cloud.md)
+* Fedora CoreOS tutorials for [AWS](docs/fedora-coreos/aws.md), [Azure](docs/fedora-coreos/azure.md), [Bare-Metal](docs/fedora-coreos/bare-metal.md), [DigitalOcean](docs/fedora-coreos/digitalocean.md), [Google Cloud](docs/fedora-coreos/google-cloud.md) and [Hetzner](docs/fedora-coreos/hetzner.md)
+* Flatcar Linux tutorials for [AWS](docs/flatcar-linux/aws.md), [Azure](docs/flatcar-linux/azure.md), [Bare-Metal](docs/flatcar-linux/bare-metal.md), [DigitalOcean](docs/flatcar-linux/digitalocean.md), [Google Cloud](docs/flatcar-linux/google-cloud.md) and [Hetzner](docs/flatcar-linux/hetzner.md)
 
 ## Usage
 
